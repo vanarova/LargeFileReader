@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Arunav\\source\\repos\\LargeFileRead_wpf\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Arunav\\source\\repos\\LargeFileRead_wpf\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Arunav\\source\\repos\\LargeFileRead_wpf\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj",
+        "projectName": "LargeFileRead_wpf",
+        "projectPath": "C:\\Users\\Arunav\\source\\repos\\LargeFileRead_wpf\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj",
+        "packagesPath": "C:\\Users\\Arunav\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Arunav\\source\\repos\\LargeFileRead_wpf\\LargeFileRead_wpf\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Arunav\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
