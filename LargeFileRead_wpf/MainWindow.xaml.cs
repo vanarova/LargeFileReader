@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.MemoryMappedFiles;
@@ -25,15 +26,20 @@ namespace LargeFileRead_wpf
         public MainWindow()
         {
             InitializeComponent();
+            
         }
+
 
         private static long position = 0;
         private static MemoryMappedFile memoryMappedFile;
         private static MemoryMappedViewStream memoryMappedViewStream;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            FileInfo info = new FileInfo(@"C:\Users\Arunav\Downloads\shellv2.stl");
-            memoryMappedFile = MemoryMappedFile.CreateFromFile(@"C:\Users\Arunav\Downloads\shellv2.stl");
+            FileInfo info = null;
+            OpenFileDialog fileOpenDialog = new OpenFileDialog();
+            if (fileOpenDialog.ShowDialog() == true)
+                info = new FileInfo(fileOpenDialog.FileName);
+            memoryMappedFile = MemoryMappedFile.CreateFromFile(fileOpenDialog.FileName);
             memoryMappedViewStream = memoryMappedFile.CreateViewStream(0, info.Length);
            
             txtBlock.Text = Read(30000);
@@ -85,10 +91,13 @@ namespace LargeFileRead_wpf
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            memoryMappedFile.Dispose();
-            memoryMappedViewStream.Dispose();
-            memoryMappedFile = null;
-
+            if (memoryMappedFile != null && memoryMappedViewStream != null)
+            {
+                memoryMappedFile.Dispose();
+                memoryMappedViewStream.Dispose();
+                memoryMappedFile = null;
+            }
+            this.Close();
         }
 
         private void txtBlock_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
@@ -99,6 +108,16 @@ namespace LargeFileRead_wpf
                 txtBlock.AppendText(Read(60000));
                 //Read(30000);
             }
+        }
+
+        private void load_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void rootGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+            //txtBlock.MaxHeight = rootGrid.RowDefinitions[0].Height.Value;
         }
     }
 }

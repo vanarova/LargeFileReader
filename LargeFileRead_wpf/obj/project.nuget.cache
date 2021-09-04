@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CsMixODNVAYQZVpYaA3lu9zWXBjRZtubYGCQwJOTvkutQmSOrFf2vUxYPRUj73p8DA1liaCSbITHAnsoI9spoA==",
+  "dgSpecHash": "BF3Q88qICXO9as2Ey11SHIHop1I8Tqy0F6KJtyLaL9pJVEZdXOLQXlEp4foTQrb0LYmyq/1adq7G5mePc5JnHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arunav\\source\\repos\\LargeFileRead_wpf\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj",
+  "projectFilePath": "C:\\Users\\Arunav\\source\\repos\\LFR\\LargeFileReader\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

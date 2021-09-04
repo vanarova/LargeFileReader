@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Arunav\\source\\repos\\LargeFileRead_wpf\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj": {}
+    "C:\\Users\\Arunav\\source\\repos\\LFR\\LargeFileReader\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Arunav\\source\\repos\\LargeFileRead_wpf\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj": {
+    "C:\\Users\\Arunav\\source\\repos\\LFR\\LargeFileReader\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arunav\\source\\repos\\LargeFileRead_wpf\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj",
+        "projectUniqueName": "C:\\Users\\Arunav\\source\\repos\\LFR\\LargeFileReader\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj",
         "projectName": "LargeFileRead_wpf",
-        "projectPath": "C:\\Users\\Arunav\\source\\repos\\LargeFileRead_wpf\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj",
+        "projectPath": "C:\\Users\\Arunav\\source\\repos\\LFR\\LargeFileReader\\LargeFileRead_wpf\\LargeFileRead_wpf.csproj",
         "packagesPath": "C:\\Users\\Arunav\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arunav\\source\\repos\\LargeFileRead_wpf\\LargeFileRead_wpf\\obj\\",
+        "outputPath": "C:\\Users\\Arunav\\source\\repos\\LFR\\LargeFileReader\\LargeFileRead_wpf\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

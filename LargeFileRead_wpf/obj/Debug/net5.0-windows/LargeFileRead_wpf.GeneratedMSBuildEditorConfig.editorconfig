@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = LargeFileRead_wpf
-build_property.ProjectDir = C:\Users\Arunav\source\repos\LargeFileRead_wpf\LargeFileRead_wpf\
+build_property.ProjectDir = C:\Users\Arunav\source\repos\LFR\LargeFileReader\LargeFileRead_wpf\
