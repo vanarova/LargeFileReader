@@ -7,38 +7,41 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="load_Loaded">
     <Grid Name="rootGrid" Loaded="rootGrid_Loaded">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150" />
-            <ColumnDefinition Width="5" />
+            
+            <ColumnDefinition Width="50" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         
             <!--<ScrollViewer VerticalScrollBarVisibility="Visible" MaxHeight="350">
             <TextBlock  Name="txtBlock" Text="TextBlock" TextWrapping="Wrap" Width="Auto" />
             </ScrollViewer>-->
-        <StackPanel Grid.Column="0" Margin="10">
-        <Button Content="Open" Width="106" Background="#FFFF8282" Margin="5" FontWeight="Bold" Click="Button_Click">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-            <Button Content="Load more" Width="106" Background="#FFFF8282" Margin="5" FontWeight="Bold" Click="Button_Click_1">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-            <Button Content="Close" Width="106" Background="#FFFF8282" Margin="5" FontWeight="Bold" Click="Button_Click_2">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        </StackPanel>
-        <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
-        <DockPanel Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <TextBox   Name="txtBlock"  Text="" Height="Auto" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"
-                   ScrollBar.Scroll="txtBlock_Scroll"   TextWrapping="Wrap" Width="Auto"/>
+
+        <DockPanel Grid.Column="0" Grid.Row="0">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Open" Click="MenuItemOpen_Click" />
+                    <MenuItem Header="_Save" />
+                    <Separator />
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+            </Menu>
         </DockPanel>
-
-
+        <TextBox   Name="txtBlock" Grid.Row="1" Grid.ColumnSpan="2" Text="" Height="Auto" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"
+                   ScrollBar.Scroll="txtBlock_Scroll"   TextWrapping="Wrap" Width="Auto"/>
+        <StackPanel Grid.Row="0" Grid.Column="2" Margin="10,0,0,0" FlowDirection="LeftToRight" Orientation="Horizontal" Height="20" MaxHeight="20">
+            <Label Width="30" HorizontalAlignment="Left" Height="20"   Margin="0" Padding="0" Background="Bisque">Skip:</Label>
+            <TextBox Width="40" HorizontalAlignment="Left" Height="20"   Margin="0" Padding="0" Background="Bisque"></TextBox>
+            <Label Width="30" HorizontalAlignment="Left" Height="20"   Padding="5,0,0,0" Background="Bisque">Mb</Label>
+            <Button Content="Refresh" HorizontalAlignment="Left" Height="20" Width="70" Margin="0" Padding="0"  ToolTip="Loads more file content" Background="#abcabc"  ></Button>
+            <Button Content="Load more" HorizontalAlignment="Left" Height="20" Width="70" Margin="0" Padding="0"  ToolTip="Loads more file content" Background="Silver"  Click="Button_Click_1"></Button>
+            <Button Content="Save" Height="20" Width="70" Padding="0"  ToolTip="Loads more file content" Background="Silver"  Click="Button_Click_3"/>
+        </StackPanel>
     </Grid>
+    
 </Window>

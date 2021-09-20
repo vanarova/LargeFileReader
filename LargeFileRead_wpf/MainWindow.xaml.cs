@@ -35,21 +35,31 @@ namespace LargeFileRead_wpf
         private static MemoryMappedViewStream memoryMappedViewStream;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //OpenFile();
+            //textBox1.Text = Read(info.Length);
+        }
+
+        private void OpenFile()
+        {
             FileInfo info = null;
             OpenFileDialog fileOpenDialog = new OpenFileDialog();
             if (fileOpenDialog.ShowDialog() == true)
                 info = new FileInfo(fileOpenDialog.FileName);
             memoryMappedFile = MemoryMappedFile.CreateFromFile(fileOpenDialog.FileName);
             memoryMappedViewStream = memoryMappedFile.CreateViewStream(0, info.Length);
-           
+
             txtBlock.Text = Read(30000);
-            //textBox1.Text = Read(info.Length);
         }
 
         public static bool IsScrolledToEnd(TextBox textBox)
         {
             return textBox.VerticalOffset + textBox.ViewportHeight == textBox.ExtentHeight;
         }
+
+        //public static bool Write(long pos ,string value)
+        //{
+        //    //memoryMappedViewStream.wri
+        //}
         public static string Read(long length)
         {
             StringBuilder resultAsString = new StringBuilder();
@@ -67,14 +77,12 @@ namespace LargeFileRead_wpf
             {
                 //Reads a byte from a stream and advances the position within the stream by one byte, or returns -1 if at the end of the stream.
                 int result = memoryMappedViewStream.ReadByte();
-
                 if (result == -1)
                 {
                     break;
                 }
 
                 char letter = (char)result;
-
                 resultAsString.Append(letter);
             }
 
@@ -118,6 +126,17 @@ namespace LargeFileRead_wpf
         private void rootGrid_Loaded(object sender, RoutedEventArgs e)
         {
             //txtBlock.MaxHeight = rootGrid.RowDefinitions[0].Height.Value;
+        }
+
+        private void MenuItemOpen_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            OpenFile();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
